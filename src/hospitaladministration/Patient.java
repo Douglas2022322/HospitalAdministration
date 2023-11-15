@@ -9,13 +9,14 @@ package hospitaladministration;
  * @author dougl
  */
 public class Patient {
+
     /*
     Name
     Date of birth
     Blood Type
     ID
-    */
-    
+     */
+
     private String name;
     private String birthDate;
     private String bloodType;
@@ -53,6 +54,5 @@ public class Patient {
     public static int getCurrentID() {
         return currentID;
     }
-    
-    
+
 }
