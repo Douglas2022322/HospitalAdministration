@@ -13,8 +13,8 @@ public abstract class Database {
     protected static final String DB_BASE_URL = "jdbc:mysql://localhost"; // Database URL
     protected static final String USER = "ooc2023"; // Database username
     protected static final String PASSWORD = "ooc2023"; // Database password
-    protected static final String DB_NAME = "hospital;";
+    protected static final String DB_NAME = "hospital";
     protected static final String TABLE_NAME = "patientdata";
-    protected static final String DB_URL = DB_BASE_URL + "//" + DB_NAME;
+    protected static final String DB_URL = DB_BASE_URL + "/" + DB_NAME;
 
 }

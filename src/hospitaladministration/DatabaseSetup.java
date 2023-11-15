@@ -17,10 +17,12 @@ public class DatabaseSetup extends Database {
 
     public static boolean setupDB() throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException {
         Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-        try (Connection conn = DriverManager.getConnection(DB_BASE_URL, USER,PASSWORD); Statement stmt = conn.createStatement();) {
+        try (
+            Connection conn = DriverManager.getConnection(DB_BASE_URL, USER, PASSWORD); Statement stmt = conn.createStatement();){
             stmt.execute("CREATE DATABASE IF NOT EXISTS " + DB_NAME + ";");
-            stmt.execute("USE hospital;");
-            String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + " ("
+            stmt.execute("USE " + DB_NAME + ";");
+            String sql
+                    = "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + " ("
                     + "name VARCHAR(255),"
                     + "birthdate DATE,"
                     + "bloodType VARCHAR(2),"
