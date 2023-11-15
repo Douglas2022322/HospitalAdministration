@@ -18,8 +18,8 @@ public class HospitalAdministration {
     public static void main(String[] args) throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException {
         // TODO code application logic here
         
-        Patient p1 = new Patient("Douglas", "15/11/23", "O+");
-        Patient p2 = new Patient("Evelin", "16/07/2001", "A+");
+        Patient p1 = new Patient("Douglas", "1997-07-25", "O+");
+        Patient p2 = new Patient("Evelin", "2001-07-16", "A+");
         
         System.out.println(p1.getPatientID());
         System.out.println(p2.getPatientID());
@@ -31,6 +31,12 @@ public class HospitalAdministration {
         }else{
             System.out.println("Error to create the database");
         }
+        
+        DatabaseWriter dbw = new DatabaseWriter();
+        if(dbw.addPatient(p1)){
+            System.out.println("p1 added");
+        }
+        
         
     }
     
