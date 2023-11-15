@@ -49,10 +49,10 @@ public class Patient {
     public int getPatientID() {
         return patientID;
     }
-    
-    
 
-    
+    public static int getCurrentID() {
+        return currentID;
+    }
     
     
 }
